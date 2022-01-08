@@ -1,2 +1,2 @@
 # springCloud-introduction
-springboot系列
+springboot系列的一个简单入门使用
