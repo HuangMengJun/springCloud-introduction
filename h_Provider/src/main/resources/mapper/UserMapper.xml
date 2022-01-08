@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+        <!--mapper为根元素，namespace指定了命名空间-->
+<mapper namespace="com.example.h_provider.dao.UserMapper">
+<resultMap id="baseResultMap" type="com.example.h_pojo.entity.User">
+    <result column="id" jdbcType="INTEGER" property="id" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="pass_word" jdbcType="VARCHAR" property="passWord" />
+</resultMap>
+
+
+<select id="findByName" parameterType="string" resultMap="baseResultMap">
+    select * from `user` where name = #{name}
+</select>
+    <select id="findByUser" resultType="com.example.h_pojo.entity.User">
+        select * from `user`
+    </select>
+</mapper>

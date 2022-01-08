@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: provider
+  datasource:
+    username: root
+    password: 199611
+    url: jdbc:mysql://localhost:3306/user?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis:
+  mapper-locations: classpath*:mapper/*.xml
+  type-aliases-package: com.example.h_pojo.entity
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8088/eureka
+server:
+  port: 9997
+  spring:
+    datasource:
+logging:
+  config: classpath:logback.xml

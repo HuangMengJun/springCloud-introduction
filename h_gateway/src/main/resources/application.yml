@@ -1,0 +1,17 @@
+server:
+  port: 9005
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: springcloud-gateway-service
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8088/eureka
